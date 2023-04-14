@@ -71,7 +71,7 @@ git clone https://github.com/Sprungles/Repository_Source_List.git
 cd Repository_Source_list/
 echo 'Copying sources list to system directory'
 sudo cp -r * /etc/apt/sources.list.d/
-rm -rf sources_list/]
+rm -rf sources_list/
 echo ''
 echo ''
 echo ''
