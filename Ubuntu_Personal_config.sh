@@ -36,8 +36,16 @@ sudo nala update
 echo 'Installing Firefox ESR'
 echo ''
 echo ''
+echo 'Installing ZAP, the Appimage Package Manager'
+# Installing dependencies for ZAP
+sudo apt install curl grep jq wget
+#Actually installing ZAP
+sudo curl https://raw.githubusercontent.com/srevinsaju/zap/main/install.sh | sudo bash -s
+echo ''
+echo ''
+echo ''
 sudo nala install firefox-esr
-echo 'Installing AppImageLauncher for AppImage Management'
+echo 'Installing AppImageLauncher for AppImage Installing'
 echo ''
 echo ''
 mkdir appimagelauncher
