@@ -101,8 +101,9 @@ done
 while true; do
    read -p "Do you wish to download the lineage kernel?" yn
    case $yn in
-        [Yy]* ) git clone https://github.com/LineageOS/android_hardware_oplus.git ~/android/lineage/oneplus/hardware/oplus && android_hardware_oplus ~/android/lineage/oneplus/hardware/oplus        [Nn]* ) cd ~/android/lineage/;;
-        * ) echo "Please yes or no.";;
+        [Yy]* ) git clone https://github.com/LineageOS/android_hardware_oplus.git ~/android/lineage/oneplus/hardware/oplus && android_hardware_oplus ~/android/lineage/oneplus/hardware/oplus       
+		[Nn]* ) cd ~/android/lineage/;;
+	   * ) echo "Please yes or no.";;
    esac
 done
 echo 'Sourcing the build'
