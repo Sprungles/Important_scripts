@@ -1,4 +1,4 @@
-sudo apt install nautilus
+sudo apt install nautilus python
 echo 'Installing Dependencies for Android Development'
 sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev python3 curl nano
 echo 'Making Directories for Android Development'
@@ -10,7 +10,15 @@ chmod a+x ~/bin/repo
 echo 'You need to configure git by putting the following:
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
-'
+echo ''
+echo ''
+echo ''
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install libc6:i386 libstdc++6:i386 
+libncurses5:i386 zlib1g:i386
+sudo apt install elfutils
+sudo apt install libc6:i386
 echo 'Close the terminal that opens when you are done with it'
 gnome-terminal
 sleep 15
@@ -26,7 +34,7 @@ echo 'Initializing Lineage 20.0 Lineage OS Repository'
 while true; do
     read -p "Do you need to initialize the lineage 20.0 repo? " yn
     case $yn in
-        [Yy]* ) repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs; break;;
+        [Yy]* ) /usr/bin/repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs; break;;
         [Nn]* ) echo 'Moving to the syncing process' && cd ~/android/lineage;;
         * ) echo "Please answer yes or no.";;
     esac
@@ -87,6 +95,13 @@ while true; do
    case $yn in
         [Yy]* ) git clone https://github.com/tangalbert919/android_kernel_oneplus_sm4350.git ~/android/lineage/kernel/oneplus/sm4350 && android_kernel_oneplus_sm4350 ~/android/lineage/kernel/oneplus/sm4350 break;;
         [Nn]* ) cd ~/android/lineage/;;
+        * ) echo "Please yes or no.";;
+   esac
+done
+while true; do
+   read -p "Do you wish to download the lineage kernel?" yn
+   case $yn in
+        [Yy]* ) git clone https://github.com/LineageOS/android_hardware_oplus.git ~/android/lineage/oneplus/hardware/oplus && android_hardware_oplus ~/android/lineage/oneplus/hardware/oplus        [Nn]* ) cd ~/android/lineage/;;
         * ) echo "Please yes or no.";;
    esac
 done
