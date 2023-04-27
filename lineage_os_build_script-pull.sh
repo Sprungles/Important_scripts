@@ -32,15 +32,15 @@ echo 'Moving to android/lineage'
 cd ~/android/lineage
 echo 'Initializing Lineage 20.0 Lineage OS Repository'
 while true; do
-    read -p "Do you need to initialize the lineage 20.0 repo? " yn
+    read -p "Do you need to initialize the lineage 20.0 repo?" yn
     case $yn in
-        [Yy]* ) /usr/bin/repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs; break;;
+        [Yy]* ) repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs; break;;
         [Nn]* ) echo 'Moving to the syncing process' && cd ~/android/lineage;;
         * ) echo "Please answer yes or no.";;
     esac
 done
 while true; do
-    read -p "Do you wish to sync the lineage repository? If you haven't already, you need too. " yn
+    read -p "Do you wish to sync the lineage repository? If you haven't already, you need too." yn
     case $yn in
         [Yy]* ) repo sync -c; break;;
         [Nn]* ) echo 'Syncing is finished';;
@@ -50,9 +50,8 @@ done
 sleep 3
 mkdir ~/android/device/oneplus
 mkdir ~/android/device/oneplus/dre
-echo 'Plug in your android device and enable USB Debugging in the Developer Settings; accept the USB debugging popup. In the same area of settings, enable root debugging'
 while true; do
-    read -p "Do you wish to download the device tree? " yn
+    read -p "Do you wish to download the device tree?" yn
     case $yn in
         [Yy]* ) git clone https://github.com/LineageOS/android_device_oneplus_dre.git ~/android/lineage/device/oneplus/dre && mkdir ~/android/lineage/device/oneplus/dre && mv android_device_oneplus_dre ~/android/lineage/device/oneplus/ ; break;;
         [Nn]* ) cd ~/android/lineage/ ;;
@@ -106,5 +105,5 @@ brunch dre
 cd $OUT
 nautilus -- ~/android/lineage/$OUT
 echo 'Build files are in this directory'
-sleep 10
+sleep 7
 exit
