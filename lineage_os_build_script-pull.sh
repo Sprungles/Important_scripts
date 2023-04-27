@@ -21,7 +21,7 @@ sudo apt install elfutils
 sudo apt install libc6:i386
 echo 'Close the terminal that opens when you are done with it'
 gnome-terminal
-sleep 15
+sleep 5
 echo 'Enabling Caching, you will need an additional 15 GB for this cache'
 export USE_CCACHE=1
 export CCACHE_EXEC=/usr/bin/ccache
