@@ -25,7 +25,7 @@ sleep 5
 echo 'Enabling Caching, you will need an additional 15 GB for this cache'
 export USE_CCACHE=1
 export CCACHE_EXEC=/usr/bin/ccache
-ccache -M 15G
+ccache -M 50G
 echo 'Enabling Compression to save space'
 ccache -o compression=true
 echo 'Moving to android/lineage'
@@ -96,14 +96,6 @@ while true; do
         [Yy]* ) git clone https://github.com/tangalbert919/android_kernel_oneplus_sm4350.git ~/android/lineage/kernel/oneplus/sm4350 && android_kernel_oneplus_sm4350 ~/android/lineage/kernel/oneplus/sm4350 break;;
         [Nn]* ) cd ~/android/lineage/;;
         * ) echo "Please yes or no.";;
-   esac
-done
-while true; do
-   read -p "Do you wish to download the lineage kernel?" yn
-   case $yn in
-        [Yy]* ) git clone https://github.com/LineageOS/android_hardware_oplus.git ~/android/lineage/oneplus/hardware/oplus && android_hardware_oplus ~/android/lineage/oneplus/hardware/oplus       
-		[Nn]* ) cd ~/android/lineage/;;
-	   * ) echo "Please yes or no.";;
    esac
 done
 echo 'Sourcing the build'
