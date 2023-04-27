@@ -69,7 +69,7 @@ mkdir ~/android/hardware/oneplus
 while true; do
    read -p "Do you wish to download the android_hardware?" yn
    case $yn in
-        [Yy]* ) git clone https://github.com/LineageOS/android_hardware_oneplus.git ~/android/hardware/oneplus/ && mv android_hardware_oneplus/ ~/android/lineage/hardware/oneplus   ; break;;
+        [Yy]* ) git clone https://github.com/LineageOS/android_hardware_oplus.git ~/android/hardware/oplus/ && mv android_hardware_oplus/ ~/android/lineage/hardware/oplus   ; break;;
 	[Nn]* ) cd ~/android/lineage/;;
 	* ) echo "Please yes or no.";;
    esac
