@@ -1,6 +1,16 @@
+echo 'Downloading Nala'
+mkdir nala/
+cd nala/
+wget https://gitlab.com/volian/volian-archive/uploads/b20bd8237a9b20f5a82f461ed0704ad4/volian-archive-keyring_0.1.0_all.deb
+wget https://gitlab.com/volian/volian-archive/uploads/d6b3a118de5384a0be2462905f7e4301/volian-archive-nala_0.1.0_all.deb
+sudo apt install ./volian-archive*.deb -y
+sudo apt install nala
+cd ~/Downloads/
+rm -rf nala/
 sudo apt install nautilus python
+sudo nala update
 echo 'Installing Dependencies for Android Development'
-sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev python3 curl nano
+sudo nala install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libncurses5 libncurses5-dev libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev python3 curl nano
 echo 'Making Directories for Android Development'
 mkdir -p ~/bin
 mkdir -p ~/android/lineage
@@ -15,10 +25,7 @@ echo ''
 echo ''
 sudo dpkg --add-architecture i386
 sudo apt update
-sudo apt install libc6:i386 libstdc++6:i386 
-libncurses5:i386 zlib1g:i386
-sudo apt install elfutils
-sudo apt install libc6:i386
+sudo apt install libc6:i386 libstdc++6:i386 libncurses5:i386 zlib1g:i386 elfutils libc6:i386 python-is-python3
 echo 'Close the terminal that opens when you are done with it'
 gnome-terminal
 sleep 5
