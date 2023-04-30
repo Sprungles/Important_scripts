@@ -14,7 +14,7 @@ sudo apt install ./volian-archive*.deb -y
 cd ~/Downloads/
 rm -rf nala/
 sudo apt update
-sudo apt install nala
+sudo apt install nala gnome-tweaks
 sudo nala update
 echo 'We are installing the various file formats'
 sudo nala install flatpak && sudo nala install snapd 
