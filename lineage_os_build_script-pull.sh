@@ -53,7 +53,6 @@ mkdir ~/android/lineage/hardware/oplus
 mkdir ~/android/lineage/kernel/oneplus
 mkdir ~/android/lineage/kernel/oneplus/sm4350
 git clone https://github.com/LineageOS/android_device_oneplus_dre.git ~/android/lineage/device/oneplus/dre
-git clone https://LineageOS/android_hardware_oplus.gitt ~/android/hardware/oplus/
 git clone https://github.com/TheMuppetts/proprietary_vendor_oneplus_dre.git ~/android/lineage/vendor/oneplus/dre
 git clone https://github.com/LineageOS/android_hardware_oplus.git ~/android/lineage/hardware/oplus
 git clone https://github.com/tangalbert919/android_kernel_oneplus_sm4350.git ~/android/lineage/kernel/oneplus/sm4350
