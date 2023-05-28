@@ -60,10 +60,14 @@ echo "##########################################################################
 echo "####                        Building for OnePlus Dre			                  ####"
 echo "################################################################################################"
 cd ~/android/lineage
-. build/envsetup.sh
-breakfast dre
-croot
-brunch dre
+echo "################################################################################################"
+echo "      Please make sure to run the following commands in the terminal at /android/lineage/   ####"
+echo "################################################################################################"
+echo "Please run the following commands in the terminal at /android/lineage/"
+echo ". build/envsetup.sh"
+echo "breakfast dre"
+echo "croot"
+echo "brunch dre"
 cd $OUT
 echo "################################################################################################"
 echo "####                        Check inside of the directory that pops up for zip              ####"
